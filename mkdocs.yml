@@ -1,0 +1,49 @@
+site_name: API Project Documentation 
+repo_name: API_Project
+repo_url: https://github.com/DeQuayG/API_Project
+use_directory_urls: false
+theme: 
+  palette: 
+
+  # Light Mode Color Palette Toggle
+  - media "(prefers-color-scheme: light)"
+    scheme: default
+    toggle: 
+      icon: material/lightbulb-outline
+      name: Switch to Light Mode 
+    primary: blue
+    accent: teal
+
+  # Dark Mode Color Palette Toggle
+  - media "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle: 
+      icon: material/lightbulb
+      name: Switch to Dark Mode 
+    primary: blue
+    accent: teal
+
+  name: material
+  features:
+  - header.autohide
+  - navigation.tabs
+  - navigation.sections
+  - navigation.top
+  - content.code.annotation
+  - content.tabs.link
+  - search.highlight
+  - search.suggest
+  - content.code.copy
+plugins: 
+  - search:
+      prebuild_index: true
+extra: 
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dequay-glascoe/
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@dmglascoe
+nav:
+  - Purpose: purpose.md
+  - API Usage: how_to.md
+  - API Education: study_notes.md
