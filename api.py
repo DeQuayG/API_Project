@@ -1,8 +1,15 @@
 from fastapi import FastAPI
 from fastapi.params import Body
 from typing import Optional
+from pydantic import BaseModel
 
 app = FastAPI() # Creates an instance of FastAPI
+
+
+class Post(BaseModel):
+      title: str or int
+      content: str 
+      public_post: bool = True
 
 @app.get("/")
 def landing_page():
@@ -13,7 +20,8 @@ def landing_page():
 def retrieve_posts():
         return ["data_key", "data_value"]
 
-@app.post("/send")
-def send_data(data: dict = Body(...)):
-      return ["Data Successfuly sent", "The body of the data sent is here ", data] 
+@app.post("/send_data")
+def send_data(new_post: Post): 
+      print(new_post.dict)
+      return ["Posted Successfully", new_post] 
       #^^ This by itself is bascially just an HTTP 200 reponse 

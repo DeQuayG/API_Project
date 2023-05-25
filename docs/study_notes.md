@@ -52,7 +52,7 @@ def send_data(data: dict = Body(...)):
 
 ^^ This code snippet will return the data sent by a POST request. In Postman we sent the data in JSON format, and this path oiperation will return that data in the form of a dictionary. 
     - 'data': data is just a variable name, it could be 'payload', 'packet', etc
-    - 'dict': The typoing of the 'data'
+    - 'dict': The typing of the 'data'
     - 'Body': A built-in of FastAPI. 
 
 The function will take the all of the fields from the 'Body' of the request, convert that data into a Python dictionary, and then store it within a variable named 'data'.
